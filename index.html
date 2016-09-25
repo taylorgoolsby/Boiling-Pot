@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="en-us" style="width: 100%; height: 100%; overflow: hidden">
 
 <head>
   <meta charset="utf-8">
@@ -15,7 +15,7 @@
       padding: 0;
     }
     /*remove scrollbars*/
-    html, body, canvas {
+    html, body {
       width: 100%;
       height: 100%;
       overflow: hidden;
@@ -23,10 +23,10 @@
   </style>
 </head>
 
-<body class="template">
+<body class="template" style="width: 100%; height: 100%; overflow: hidden">
   <p class="header"><span>Unity WebGL Player | </span>Boiling-Pot</p>
   <div class="template-wrap clear" style="width: 100%; height: 100%; overflow: hidden">
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" style="width: 100%; height: 100%; overflow: hidden"></canvas>
   </div>
   <script type='text/javascript'>
   var Module = {
@@ -46,7 +46,6 @@ window.addEventListener('resize', function() {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
 }, false)
-document.documentElement.style.overflow = 'hidden';  // firefox, chrome
 document.body.scroll = "no"; // ie only
 </script>
 
