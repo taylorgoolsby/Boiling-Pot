@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="en-us" style="width: 100%; height: 100%; overflow: hidden">
 
 <head>
   <meta charset="utf-8">
@@ -23,10 +23,10 @@
   </style>
 </head>
 
-<body class="template">
+<body class="template" style="width: 100%; height: 100%; overflow: hidden">
   <p class="header"><span>Unity WebGL Player | </span>Boiling-Pot</p>
-  <div class="template-wrap clear" style="width: 100%; height: 100%">
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" style="width: 100%; height: 100%"></canvas>
+  <div class="template-wrap clear" style="width: 100%; height: 100%; overflow: hidden">
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" style="width: 100%; height: 100%; overflow: hidden"></canvas>
   </div>
   <script type='text/javascript'>
   var Module = {
@@ -46,6 +46,7 @@ window.addEventListener('resize', function() {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
 }, false)
+document.body.scroll = "no"; // ie only
 </script>
 
 </html>
